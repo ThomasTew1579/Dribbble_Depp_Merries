@@ -2,18 +2,56 @@
 /* https://i.scdn.co/image/ab67616d00001e02f801a7471a4bbe473730b811     album 1 */
 /* https://i.scdn.co/image/ab67616d00001e029add3d305878afaa357dce0e     album 2 */
 
+/* https://assets.bigcartel.com/product_images/331125420/275139199_487641863061332_6906782939937699906_n.jpg?auto=format&fit=max&w=650 */
+
+/* https://assets.bigcartel.com/product_images/331125438/275420546_5249928221684315_7455971899604421024_n.jpg?auto=format&fit=max&w=650 */
+
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
-  background: linear-gradient(
-    0deg,
-    rgba(216, 198, 184, 1) 0%,
-    rgba(226, 233, 239, 1) 100%
-  );
+  width: 100%;
+  background-color: red;
+  /* background: linear-gradient( 0deg, rgba(216, 198, 184, 1) 0%, rgba(226, 233, 239, 1) 100% ); */
 }
+
+
+
+/* enter site=================================================================== */
+
+#entrer{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  animation: entrer 0.8s ease 1s forwards;
+}
+
+#entrer div{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background:url(./images/logo_black.png), rgb(255, 255, 255) ;
+  background-size: 30vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 100%;
+}
+
+@keyframes entrer {
+  to{
+    opacity: 0;
+  } 
+}
+
+/* ===================================================================enter site */
+
+/* header======================================================================= */
 
 header {
   position: fixed;
@@ -22,7 +60,8 @@ header {
   justify-content: space-between;
   height: 100px;
   width: 100%;
-  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
 }
 
 nav {
@@ -32,7 +71,6 @@ nav {
   align-items: center;
   margin: 0px 5%;
   width: 100%;
-  /* z-index: 10; */
   background-color: white;
 }
 
@@ -66,35 +104,50 @@ nav {
 
 #liens a {
   color: black;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 #liens a:hover {
   color: rgba(8, 119, 238, 0.469);
   text-shadow: rgba(0, 0, 0, 0.18) 1px 0 10px;
+  scale: 1.2;
 }
+
+/* =======================================================================header */
+
+/* main======================================================================= */
 
 main {
   display: flex;
+  flex-direction: column;
   position: absolute;
+  align-items: center;
+  padding: 0;
+  margin: 0;
   padding-top: 100px;
   width: 100%;
   z-index: -1;
+  background: linear-gradient( 0deg, rgba(216, 198, 184, 1) 0%, rgba(226, 233, 239, 1) 100% );
 }
 
+section{
+  display: flex;
+  width: 90%;
+}
+
+/* section home---------------------------------------------------------------- */
+
 #home {
-    margin: 0 5%;
-    position: relative;
-    height: 85vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(255, 255, 255);
+  position: relative;
+  height: 90vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 #home .left {
   width: 25%;
-  height: 100%;
+  height: 90%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -102,7 +155,7 @@ main {
 }
 
 #titre h1 {
-  font-size: 8em;
+  font-size: 8vw;
   margin: 0;
   font-weight: 500;
   height: 30%;
@@ -110,38 +163,38 @@ main {
 }
 
 span{
-    margin: 0;
-    padding: 0;
-    display: block;
-    transform: translateY(-100%);
+  margin: 0;
+  padding: 0;
+  display: block;
+  transform: translateY(-100%);
 }
 
 #titre :nth-child(1) span{
-    animation: apparition_titre 0.4s forwards ;
+  animation: apparition_titre 0.4s 1.3s forwards ;
 }
 
 #titre :nth-child(2) span{
-    animation: apparition_titre 0.4s  0.1s forwards ;
+  animation: apparition_titre 0.4s  1.4s forwards ;
 }
 
 #titre :nth-child(3) span{
-    animation: apparition_titre 0.4s  0.2s forwards ;
+  animation: apparition_titre 0.4s  1.5s forwards ;
 }
 
 @keyframes apparition_titre {
-    from {
-        transform: translateY(100%);
-    }
-
-    to{
-        transform: translateY(0);
-    }
-    
+  from {
+    transform: translateY(100%);
+  }
+  
+  to{
+    transform: translateY(0);
+  }
+  
 }
 
 #home .right {
   width: 75%;
-  height: 100%;
+  height: 90%;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -160,19 +213,19 @@ span{
 }
 
 .membre h2{
-    position: relative;
-    bottom: -70%;
-    rotate: -90deg;
-    font-size: 3rem;
+  position: relative;
+  bottom: -70%;
+  rotate: -90deg;
+  font-size: 3vw;
 }
 
 .membre .nom{
-    position: relative;
-    bottom: -68%;
-    left:  15%;
-    font-size: 2rem;
-    display: none;
-    transition: 0.3s;
+  position: relative;
+  bottom: -68%;
+  left:  15%;
+  font-size: 2vw;
+  display: none;
+  transition: 0.3s;
 }
 
 .membre div{
@@ -181,38 +234,112 @@ span{
 }
 
 .photo{
-    width: 100%;
+  width: 100%;
 }
 
 .tonio .photo{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.987) 100%), url(./images/chanteur.jpg);
-    background-position: 60%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.987) 100%), url(./images/chanteur.jpg);
+  background-position: 60%;
 }
 
 
 .vicou .photo{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.987) 100%), url(./images/bassiste.jpg);
-    background-position: 50%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.987) 100%), url(./images/bassiste.jpg);
+  background-position: 50%;
   background-color: black;
 }
 
 .theo .photo{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.987) 100%), url(./images/batteur.jpg);
-    background-position: 60%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.987) 100%), url(./images/batteur.jpg);
+  background-position: 60%;
 }
 
 .grow{
-    flex-grow: 2;
+  flex-grow: 2;
 }
 
 .grow h2{
-    position: relative;
-    left: 5%;
-    bottom: -75%;
-    rotate: 0deg;
-    font-size: 4rem;
+  position: relative;
+  left: 5%;
+  bottom: -75%;
+  rotate: 0deg;
+  font-size: 4rem;
 }
 
 .grow .nom{
-    display: flex;
+  display: flex;
 }
+
+/* ----------------------------------------------------------------section home */
+
+.background{
+  background-attachment: fixed;
+  background-size: cover ;
+  width: 100%;
+  height: 50vh;
+}
+
+#venice{
+  background-image: url(/images/venice.jpg);
+}
+
+/* section music---------------------------------------------------------------- */
+
+#music{
+  height: 400px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 3% 0 3% 0;
+}
+
+#music .lecteur{
+  width: 50%;
+  height: 100%;
+}
+
+
+#music .select{
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.663);
+}
+
+.listeAlbum{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 5vw;
+  height: 100%;
+}
+
+.listeAlbum img{
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.listeAlbum img:hover{
+  transform: translateX(-20%);
+}
+
+
+/* ----------------------------------------------------------------section music */
+
+#banniere{
+  background-image: url(/images/banniere.jpg);
+  background-position: center;
+}
+
+/* section merche---------------------------------------------------------------- */
+
+#merch{
+  height: 400px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 3% 0 3% 0;
+}
+
+/* ----------------------------------------------------------------section merch */
+
+/* =======================================================================main */

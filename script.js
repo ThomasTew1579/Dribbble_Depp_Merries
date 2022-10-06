@@ -1,4 +1,11 @@
 
+
+setTimeout(() => {
+    document.getElementById("entrer").style.display ="none";
+}, 1800)
+
+console.log(window.innerWidth)
+
 let membre = document.querySelectorAll(".membre")
 
 membre[0].addEventListener("mouseover", () => {
