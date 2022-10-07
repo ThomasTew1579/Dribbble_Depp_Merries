@@ -28,3 +28,7 @@ function changerMembre (indexMembre){
         }
     }
 }
+
+console.log(document.getElementById("music").getElementsByClassName("select")[0])
+
+let albumSelect = document.getElementById("music").getElementsByClassName("select")[0]
