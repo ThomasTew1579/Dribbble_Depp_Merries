@@ -14,8 +14,6 @@ body {
   padding: 0;
   font-family: "Roboto";
   width: 100%;
-  background-color: red;
-  /* background: linear-gradient( 0deg, rgba(216, 198, 184, 1) 0%, rgba(226, 233, 239, 1) 100% ); */
 }
 
 
@@ -113,6 +111,12 @@ nav {
   scale: 1.2;
 }
 
+#menu{
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
 /* =======================================================================header */
 
 /* main======================================================================= */
@@ -132,6 +136,7 @@ main {
 section{
   display: flex;
   width: 90%;
+  flex-direction: row;
 }
 
 
@@ -139,9 +144,8 @@ section{
 
 #home {
   position: relative;
-  height: 90vh;
+  height: 95vh;
   padding-top: 90px;
-  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -294,9 +298,7 @@ span{
   padding: 100px 0 100px 0;
 }
 
-
-
-#music .lecteur{
+#music #lecteur{
   width: 50%;
   height: 100%;
 }
@@ -380,15 +382,15 @@ span{
   display: flex;
   flex-direction: row;
   height: 90%;
-  width: calc(80vh *0.9);
+  width: calc(80vh * 0.9);
   overflow: hidden;
   border-radius: 2vw;
 }
 
 .apercu .scroller{
   position: absolute;
-  width: calc(80vh *0.9);
-  height: calc(80vh *0.9);
+  width: calc(80vh * 0.9);
+  height: calc(80vh * 0.9);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -417,9 +419,14 @@ span{
 
 }
 
-.galerie img{
+.galerie{
+  display: flex;
+  width: calc(80vh *0.9);
+  transition: 0.5s;
+}
+
+.tshirt{
   height: 100%;
-  transform: translateX(-00px);
 }
 /* ----------------------------------------------------------------section merch */
 
@@ -441,13 +448,13 @@ span{
 }
 
 #contact h1{
-  font-size: 5em;
+  font-size: 3em;
 }
 
 #contact a{
   color: rgba(255, 255, 255, 0.743);
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 #liensContact{
@@ -460,3 +467,208 @@ span{
 /* ----------------------------------------------------------------section contact */
 
 /* =======================================================================main */
+
+
+
+
+/* mobile===================================================================== */
+
+@media (max-width:1200px) {
+
+  /* menu----------------------------------------------- */
+  
+  #menu{
+    display: flex;
+  }
+  
+  #liens{
+    display: none;
+  }
+  
+  #navigateur{
+    display: none;
+  }
+  
+  .menu_mobile{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .menu_mobile #menu{
+    display: none;
+  }
+  
+  .menu_mobile #liens{
+    display: flex;
+    width: 80%;
+  }
+  
+  .menu_mobile #navigateur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+  }
+  
+  .menu_mobile #logo_titre{
+    height: 100px;
+  }
+  
+  main.menu_mobile {
+    display: none;
+  }
+  
+  /* -----------------------------------------------menu */
+
+  /* main----------------------------------------------- */
+
+    section{
+      flex-direction: column;
+    }
+
+    #home{
+      height: 80vh;
+      padding-bottom: 20px;
+    }
+
+    #home .left {
+      height: 27vw;
+    }
+
+    #home .right{
+      width: 100%;
+    }
+
+    .membre h2{
+      bottom: -55%;
+      font-size: 4.5vw;
+    }
+
+    .membre .nom{
+      left:  15%;
+      font-size: 5.5vw;
+    }
+
+    .tonio .photo{
+      background-position: left 60% top 30%;
+    }
+
+
+    .vicou .photo{
+      background-position: left 50% top 35%;
+    }
+
+    .theo .photo{
+      background-position: left 60% top 30%;
+    }
+
+    #music{
+      height: 150vh; 
+      justify-content: space-around;
+      display: flex;
+      align-items: center;
+      padding: 20px 0 20px 0;
+    }
+
+    #music #lecteur{
+      margin: 20px 0 20px 0;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    #music .select{
+      width: 80vw;
+      height: 80vw;
+    }
+
+    .listeAlbum{
+      flex-direction: row;
+      width: 100%;
+      height: 15vw;
+    }
+
+    .listeAlbum img{
+      border-radius: 6px;
+      width: 15vw;
+      height: 15vw;
+    }
+
+    .listeAlbum img:hover{
+      transform: translateY(-20%);
+    }
+
+
+    #merch{
+      height: 150vh;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding: 20px 0 20px 0;
+    }
+
+    #merch .left{
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+
+    #merch h1{
+      font-size: 4em;
+    }
+
+    .apercu{
+      width: 100vw;
+    }
+
+    .apercu .scroller{
+      width: 100vw;
+    }
+
+
+    .galerie{
+      display: flex;
+      width: 100vw;
+      transition: 0.5s;
+    }
+
+    .tshirt{
+      height: 100%;
+    }
+
+
+    #contact h1{
+      font-size: 3em;
+    }
+
+    #contact a{
+      font-size: 6vw;
+    }
+
+    #liensContact{
+      width: 100%;
+      justify-content: space-around;
+    }
+
+
+
+
+
+
+
+  /* -----------------------------------------------main */
+
+}
+
+
+
+
+/* =====================================================================mobile */
